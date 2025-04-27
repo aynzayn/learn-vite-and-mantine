@@ -20,7 +20,12 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
+    "@fullcalendar/core": "6.1.17",
+    "@fullcalendar/daygrid": "6.1.17",
+    "@fullcalendar/react": "6.1.17",
+    "@fullcalendar/resource-timegrid": "6.1.17",
     "@mantine/core": "7.17.5",
+    "@mantine/dates": "7.17.5",
     "@mantine/hooks": "7.17.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
