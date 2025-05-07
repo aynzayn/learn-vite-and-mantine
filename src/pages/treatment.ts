@@ -52,6 +52,6 @@ const data = [{
 ];
 
 export default data.map(({name, room, type}, index) => ({
-  id: `${index + 1}`,
+  id: `${index + 1}`.padStart(4, '0'),
   title: [type, name, room ? `каб.${room}`: ''].join(' '),
 }));

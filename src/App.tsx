@@ -4,6 +4,7 @@ import '@mantine/dates/styles.css';
 import { MantineProvider } from '@mantine/core';
 import { Router } from './Router';
 import { theme } from './theme';
+import 'dayjs/locale/ru';
 
 export default function App() {
   return (

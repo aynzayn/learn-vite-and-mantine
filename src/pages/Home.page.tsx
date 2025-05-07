@@ -1,5 +1,5 @@
 import { useDisclosure } from '@mantine/hooks';
-import { AppShell, Button, Burger, Divider, Group } from '@mantine/core';
+import { AppShell, Divider, Group } from '@mantine/core';
 import { Calendar } from '@mantine/dates';
 
 import FullCalendar from '@fullcalendar/react';
@@ -8,10 +8,10 @@ import resourceTimeGridPlugin from '@fullcalendar/resource-timegrid'; // a plugi
 
 import treatment from './treatment';
 import events from './events';
+import { AddTreatment } from './add-treatment';
+import { AppHeader } from '../components/header';
 
 export function HomePage() {
-  const [opened, { toggle }] = useDisclosure();
-
   return (
     <AppShell
       header={{ height: 60 }}
@@ -21,17 +21,7 @@ export function HomePage() {
       }}
       padding="md"
     >
-      <AppShell.Header >
-        <Group align="center">
-          <Burger
-            opened={opened}
-            onClick={toggle}
-            size="sm"
-          />
-          <Button>Добавить лечение</Button>
-          <Button>Добавить врача</Button>
-        </Group>
-      </AppShell.Header>
+      <AppHeader />
 
       <AppShell.Navbar p="md">
         <Calendar />
