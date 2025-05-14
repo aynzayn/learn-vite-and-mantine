@@ -1,8 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { HomePage } from './pages/Home.page';
+
 import { AdmissionPeriodsPage } from './pages/admission-periods.page';
-import { SpecialistsPage } from './pages/specialists';
+import { HomePage } from './pages/Home.page';
 import { PatientsPage } from './pages/patients';
+import { SpecialistsPage } from './pages/specialists';
 
 const router = createBrowserRouter([
   {

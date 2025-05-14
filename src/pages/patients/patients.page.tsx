@@ -4,6 +4,7 @@ import { AppShell, Center, Table } from '@mantine/core';
 
 import { AppHeader } from '../../components/header';
 import { usePatientsStore } from '../../stores/patients-store';
+
 import { AddPatient } from './add-patient';
 
 export function PatientsPage() {

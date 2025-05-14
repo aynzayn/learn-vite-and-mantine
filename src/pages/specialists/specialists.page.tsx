@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { AppShell, Input, Center, Table } from '@mantine/core';
+import { AppShell, Center, Input, Table } from '@mantine/core';
 
 import { AppHeader } from '../../components/header';
 import { useSpecialistsStore } from '../../stores/specialists-store';

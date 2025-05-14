@@ -1,4 +1,5 @@
 import { AppShell, Group, NavLink } from '@mantine/core';
+
 import { ColorSchemeToggle } from './ColorSchemeToggle/color-scheme-toggle';
 
 import './header.css';

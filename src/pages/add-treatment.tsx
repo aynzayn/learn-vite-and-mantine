@@ -1,5 +1,6 @@
+import { Button, Fieldset, Modal, NativeSelect, TextInput } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { Modal, Button, Fieldset, NativeSelect, TextInput } from '@mantine/core';
+
 import data from './doctors';
 import patients from './patients';
 

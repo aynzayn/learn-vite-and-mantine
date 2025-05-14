@@ -1,8 +1,11 @@
-import { useDisclosure } from '@mantine/hooks';
-import { Modal, Button, Group, TextInput } from '@mantine/core';
-import { isNotEmpty, useForm } from '@mantine/form';
 import { useCallback } from 'react';
+
+import { Button, Group, Modal, TextInput } from '@mantine/core';
+import { isNotEmpty, useForm } from '@mantine/form';
+import { useDisclosure } from '@mantine/hooks';
+
 import { usePatientsStore } from '../../stores/patients-store';
+
 import { translit } from './translit';
 
 export function AddPatient() {

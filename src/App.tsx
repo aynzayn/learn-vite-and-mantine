@@ -1,10 +1,12 @@
-import '@mantine/core/styles.css';
-import '@mantine/dates/styles.css';
+import 'dayjs/locale/ru';
 
 import { MantineProvider } from '@mantine/core';
+
 import { Router } from './Router';
 import { theme } from './theme';
-import 'dayjs/locale/ru';
+
+import '@mantine/core/styles.css';
+import '@mantine/dates/styles.css';
 
 export default function App() {
   return (

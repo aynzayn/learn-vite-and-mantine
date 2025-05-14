@@ -1,12 +1,13 @@
-import { AppShell, Divider } from '@mantine/core';
-import { Calendar } from '@mantine/dates';
-
 import FullCalendar from '@fullcalendar/react';
 import resourceTimeGridPlugin from '@fullcalendar/resource-timegrid'; // a plugin!
 
-import treatment from './treatment';
-import events from './events';
+import { AppShell, Divider } from '@mantine/core';
+import { Calendar } from '@mantine/dates';
+
 import { AppHeader } from '../components/header';
+
+import events from './events';
+import treatment from './treatment';
 
 export function HomePage() {
   return (
