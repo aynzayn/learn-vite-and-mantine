@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HomePage } from './pages/Home.page';
 import { AdmissionPeriodsPage } from './pages/admission-periods.page';
 import { SpecialistsPage } from './pages/specialists';
+import { PatientsPage } from './pages/patients';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: '/specialists',
     element: <SpecialistsPage />,
+  },
+  {
+    path: '/patients',
+    element: <PatientsPage />,
   },
 ]);
 

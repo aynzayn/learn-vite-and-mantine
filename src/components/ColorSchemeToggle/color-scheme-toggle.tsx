@@ -1,4 +1,4 @@
-import { Button, Group, useMantineColorScheme } from '@mantine/core';
+import { useMantineColorScheme } from '@mantine/core';
 
 import './color-scheme-toggle.css';
 import { useCallback } from 'react';
@@ -20,25 +20,25 @@ export function ColorSchemeToggle() {
     <div className="wrapper">
       <input className="day-night-switch" type="checkbox" id="day-night" onChange={toggleScheme}/>
       <label className="day-night-switch" htmlFor="day-night">
-        <div className="celestial sun"></div>
+        <div className="celestial sun" />
         <div className="celestial moon">
           <div className="craters">
-            <div className="crater"></div>
-            <div className="crater"></div>
-            <div className="crater"></div>
-            <div className="crater"></div>
-            <div className="crater"></div>
+            <div className="crater" />
+            <div className="crater" />
+            <div className="crater" />
+            <div className="crater" />
+            <div className="crater" />
           </div>
         </div>
         <div className="decorations">
-          <div className="decoration"></div>
-          <div className="decoration"></div>
-          <div className="decoration"></div>
-          <div className="decoration"></div>
+          <div className="decoration" />
+          <div className="decoration" />
+          <div className="decoration" />
+          <div className="decoration" />
         </div>
         <div className="mountains">
-          <div></div>
-          <div></div>
+          <div />
+          <div />
         </div>
       </label>
 

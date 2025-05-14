@@ -36,7 +36,7 @@ export class Http {
       headers: {
         "Content-Type": "application/json"
       },
-      body,
+      body: JSON.stringify(body),
     });
 
     const data = await response.json();

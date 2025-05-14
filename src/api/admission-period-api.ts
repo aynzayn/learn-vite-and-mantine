@@ -1,4 +1,3 @@
-import { API_URL } from "./utils/api-url";
 import { request } from './utils/http';
 
 export class AdmissionPeriodAPI {

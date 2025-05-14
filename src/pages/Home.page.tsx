@@ -1,14 +1,11 @@
-import { useDisclosure } from '@mantine/hooks';
-import { AppShell, Divider, Group } from '@mantine/core';
+import { AppShell, Divider } from '@mantine/core';
 import { Calendar } from '@mantine/dates';
 
 import FullCalendar from '@fullcalendar/react';
-// import dayGridPlugin from '@fullcalendar/daygrid'
 import resourceTimeGridPlugin from '@fullcalendar/resource-timegrid'; // a plugin!
 
 import treatment from './treatment';
 import events from './events';
-import { AddTreatment } from './add-treatment';
 import { AppHeader } from '../components/header';
 
 export function HomePage() {
@@ -33,11 +30,11 @@ export function HomePage() {
           plugins={[ resourceTimeGridPlugin  ]}
           initialView="resourceTimeGridDay"
           schedulerLicenseKey="GPL-My-Project-Is-Open-Source"
-          slotDuration={"00:10:00"}
-          slotMinTime={"08:00:00"}
-          slotMaxTime={"20:00:00"}
+          slotDuration="00:10:00"
+          slotMinTime="08:00:00"
+          slotMaxTime="20:00:00"
           resources={treatment}
-          locale={'ru'}
+          locale="ru"
           slotLabelFormat={{
             hour: 'numeric',
             minute: '2-digit',

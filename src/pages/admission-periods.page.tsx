@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
 import dayjs from 'dayjs';
 
-import { useDisclosure } from '@mantine/hooks';
-import { AppShell, Input, Center } from '@mantine/core';
+import { AppShell, Input, Center, Table } from '@mantine/core';
 
-import { Table } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 
 import { useAdmissAdmissionStore } from '../stores/admission-periods-store';
