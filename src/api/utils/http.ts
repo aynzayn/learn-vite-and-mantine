@@ -4,7 +4,7 @@ import { API_URL } from './api-url';
  * Класс для выполнения произвольных http-запросов
  */
 export class Http {
-  private _apiBaseUrl: string = null;
+  private _apiBaseUrl: string | null = null;
   /**
    * Конструктор класса Http
    * @param apiBaseUrl URL до endpoint-а API-сервиса
@@ -21,11 +21,11 @@ export class Http {
       },
     });
 
-    const data = await response.json();
+    const data = await response?.json();
 
     if (!response.ok) {
       throw new Error(data.message);
-    };
+    }
 
     return data;
   }
@@ -39,11 +39,11 @@ export class Http {
       body: JSON.stringify(body),
     });
 
-    const data = await response.json();
+    const data = await response?.json();
 
     if (!response.ok) {
       throw new Error(data.message);
-    };
+    }
 
     return data;
   }

@@ -7,9 +7,17 @@ import { Calendar } from '@mantine/dates';
 import { AppHeader } from '../components/header';
 
 import events from './events';
-import treatment from './treatment';
+import { useSpecialistsStore } from '../stores/specialists-store';
+import { useEffect } from 'react';
+import { fullNameToShort } from '../utils/fullNameToShort';
 
 export function HomePage() {
+  const { specialists, fetch } = useSpecialistsStore();
+
+  useEffect(() => {
+    fetch();
+  }, []);
+
   return (
     <AppShell
       header={{ height: 60 }}
@@ -34,7 +42,7 @@ export function HomePage() {
           slotDuration="00:10:00"
           slotMinTime="08:00:00"
           slotMaxTime="20:00:00"
-          resources={treatment}
+          resources={specialists.map(({id, fullName, procedures}) => ({id, title: `${fullNameToShort(fullName)}\n ${procedures.map(({name}) => name).join(' / ')}`}))}
           locale="ru"
           slotLabelFormat={{
             hour: 'numeric',

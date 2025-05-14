@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { AdmissionPeriodsPage } from './pages/admission-periods.page';
+import { AdmissionPeriodsPage } from './pages/admission-periods/admission-periods.page';
 import { HomePage } from './pages/Home.page';
 import { PatientsPage } from './pages/patients';
 import { SpecialistsPage } from './pages/specialists';

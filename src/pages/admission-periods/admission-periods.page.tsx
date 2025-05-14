@@ -4,8 +4,8 @@ import dayjs from 'dayjs';
 import { AppShell, Center, Input, Table } from '@mantine/core';
 import { DateInput } from '@mantine/dates';
 
-import { AppHeader } from '../components/header';
-import { useAdmissAdmissionStore } from '../stores/admission-periods-store';
+import { AppHeader } from '../../components/header';
+import { useAdmissAdmissionStore } from '../../stores/admission-periods-store';
 
 export function AdmissionPeriodsPage() {
   const { periods, fetch } = useAdmissAdmissionStore();

@@ -1,17 +1,17 @@
 import { useCallback } from 'react';
 
-import { Button, Group, Modal, TextInput } from '@mantine/core';
+import { Button, Group, Modal, MultiSelect, TextInput } from '@mantine/core';
 import { isNotEmpty, useForm } from '@mantine/form';
 import { useDisclosure } from '@mantine/hooks';
 
-import { usePatientsStore } from '../../stores/patients-store';
+import { useSpecialistsStore } from '../../stores/specialists-store';
 
 import { translit } from '../../utils/translit';
 import { fullNameToShort } from '../../utils/fullNameToShort';
 
-export function AddPatient() {
+export function AddSpecialist() {
   const [opened, { open, close }] = useDisclosure(false);
-  const { create } = usePatientsStore();
+  const { procedures, create } = useSpecialistsStore();
 
   const form = useForm({
     mode: 'uncontrolled',
@@ -37,7 +37,7 @@ export function AddPatient() {
 
   return (
     <>
-      <Modal opened={opened} onClose={close} title="Добавление пациента">
+      <Modal opened={opened} onClose={close} title="Добавление специалиста">
         <form onSubmit={form.onSubmit(handleSubmit)}>
           <TextInput
             withAsterisk
@@ -46,14 +46,21 @@ export function AddPatient() {
             key={form.key('fullName')}
             {...form.getInputProps('fullName')}
           />
-
+          <MultiSelect
+            withAsterisk
+            checkIconPosition="right"
+            data={procedures.map(({id, name}) => ({ value: id, label: name }))}
+            label="Специализация"
+            placeholder="Pick value"
+            hidePickedOptions
+          />
           <Group justify="flex-end" mt="md">
             <Button type="submit">Сохранить</Button>
           </Group>
         </form>
       </Modal>
 
-      <Button variant="default" onClick={open} color="gray" radius="md">Добавить пациента</Button>
+      <Button variant="default" onClick={open} color="gray" radius="md">Добавить специалиста</Button>
     </>
   );
 }

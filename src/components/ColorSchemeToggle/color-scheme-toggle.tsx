@@ -5,7 +5,7 @@ import { useMantineColorScheme } from '@mantine/core';
 import './color-scheme-toggle.css';
 
 export function ColorSchemeToggle() {
-  const { setColorScheme } = useMantineColorScheme();
+  const { colorScheme, setColorScheme } = useMantineColorScheme();
 
   const toggleScheme = useCallback((e) => {
     const { checked } = e.target;
@@ -19,7 +19,7 @@ export function ColorSchemeToggle() {
 
   return (
     <div className="wrapper">
-      <input className="day-night-switch" type="checkbox" id="day-night" onChange={toggleScheme}/>
+      <input className="day-night-switch" type="checkbox" id="day-night" onChange={toggleScheme} checked={colorScheme === 'light'}/>
       <label className="day-night-switch" htmlFor="day-night">
         <div className="celestial sun" />
         <div className="celestial moon">
