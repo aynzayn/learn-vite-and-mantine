@@ -20,23 +20,23 @@ export function ColorSchemeToggle() {
     <div className="wrapper">
       <input className="day-night-switch" type="checkbox" id="day-night" onChange={toggleScheme}/>
       <label className="day-night-switch" htmlFor="day-night">
-        <div class="celestial sun"></div>
-        <div class="celestial moon">
-          <div class="craters">
-            <div class="crater"></div>
-            <div class="crater"></div>
-            <div class="crater"></div>
-            <div class="crater"></div>
-            <div class="crater"></div>
+        <div className="celestial sun"></div>
+        <div className="celestial moon">
+          <div className="craters">
+            <div className="crater"></div>
+            <div className="crater"></div>
+            <div className="crater"></div>
+            <div className="crater"></div>
+            <div className="crater"></div>
           </div>
         </div>
-        <div class="decorations">
-          <div class="decoration"></div>
-          <div class="decoration"></div>
-          <div class="decoration"></div>
-          <div class="decoration"></div>
+        <div className="decorations">
+          <div className="decoration"></div>
+          <div className="decoration"></div>
+          <div className="decoration"></div>
+          <div className="decoration"></div>
         </div>
-        <div class="mountains">
+        <div className="mountains">
           <div></div>
           <div></div>
         </div>

@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HomePage } from './pages/Home.page';
 import { AdmissionPeriodsPage } from './pages/admission-periods.page';
+import { SpecialistsPage } from './pages/specialists';
 
 const router = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
   {
     path: '/periods',
     element: <AdmissionPeriodsPage />,
+  },
+  {
+    path: '/specialists',
+    element: <SpecialistsPage />,
   },
 ]);
 
